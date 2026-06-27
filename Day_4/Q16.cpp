@@ -1,48 +1,47 @@
-#include <iostream>
+// Write a program to Print Armstrong numbers in a range.
+#include<iostream>
 using namespace std;
 
-// Counting digits
-int countDigits(int n) {
-    int count = 0;
-    while (n > 0) {
-        count++;
-        n /= 10;
-    }
-    return count;
-}
-
-int pow(int num, int power){
-    int ans =1;
-    for (int i = 0; i < power; i++)
-    {
-        ans *= num;
-    }
-    return ans;
-}
-// Function to check Armstrong number
-bool armstrong(int n) {
-    int original = n;
-    int digits = countDigits(n);  // Count digits
-    int sum = 0;
-
-    while (n > 0) {
-        int digit = n % 10;
-        sum += pow(digit, digits);  
-        n /= 10;
-    }
-
-    return sum == original;
-}
-
 int main(){
-    // Q- Write a program to Print Armstrong numbers in a range
-    int l,h;
-    cout << "Enter upper and lower limit of ur range" << endl;
-    cin >> l >> h;
-    for (int i = l; i <= h; i++)
-    {
-        if((armstrong(i))) cout << i << " ";
+
+    int n;
+    cout<<"Enter a number: ";
+    cin >> n;
+
+    cout<<"Armstrong numbers between 0 and "<<n<<" are: "<<endl;
+    for(int i=0; i<=n; i++){
+        int original = i;
+        int temp = i;
+        int digits = 0; 
+
+        if(temp ==0){
+            digits = 1;
+        }
+        else{
+            while(temp > 0){
+                digits++;
+                temp = temp/10;
+            }
+        }
+
+        temp = i;
+        int sum = 0;
+
+        while(temp > 0){
+            int ld = temp % 10;
+            int power = 1;
+            for (int j = 0; j < digits; j++) {
+                power *= ld;
+            }
+            sum += power;
+            temp = temp/10;
+        }
+        if(i == 0){
+            sum = 0;
+        }
+
+        if (sum == original) cout << original << endl;
     }
-    
+
     return 0;
 }
