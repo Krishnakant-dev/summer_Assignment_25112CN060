@@ -1,5 +1,5 @@
 // Write function for palindrome.
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;    
 
 bool isPalindrome(string str) {
@@ -15,6 +15,7 @@ bool isPalindrome(string str) {
     }
     return true;
 }
+//..
 
 int main() {
     string str;

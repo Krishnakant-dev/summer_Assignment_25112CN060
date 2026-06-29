@@ -1,5 +1,5 @@
 // Write a program to Frequency of an element.
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 //

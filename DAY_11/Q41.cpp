@@ -1,6 +1,6 @@
 // Write function to find sum of two numbers.
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int sum(int a, int b) {

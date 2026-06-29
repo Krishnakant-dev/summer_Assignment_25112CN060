@@ -13,7 +13,7 @@ bool isArmstrong(int num) {
         originalNum /= 10;
         n++;
     }
-
+//..
     originalNum = num;
 
     // Calculate the sum of the nth powers of the digits

@@ -1,11 +1,13 @@
 // Write function to find maximum.
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int findMax(int a, int b) {
     return (a > b) ? a : b;
 }
+
+
 
 int main() {
     int num1, num2;

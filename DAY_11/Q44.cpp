@@ -1,6 +1,6 @@
 // Write function to find factorial.
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int factorial(int n) {
